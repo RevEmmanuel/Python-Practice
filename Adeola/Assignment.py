@@ -19,7 +19,7 @@ class Assignment:
     def bacteria_start_with(bacteria):
         print(f'Hour\t\tNumber of Bacteria')
         for hours in range(0, 20, 5):
-            output = bacteria * 2 * hours
+            output = bacteria * (2 ** hours)
             print(f'{hours}\t\t\t{output}')
 
     @staticmethod
