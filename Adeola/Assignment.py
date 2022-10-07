@@ -41,7 +41,7 @@ class Assignment:
     @staticmethod
     def turing_test():
         problem = input('What is your problem? ')
-        history = input(f'Have you had this problem {problem} before? (yes or no)')
+        history = input(f'Have you had this {problem} problem before? (yes or no)')
         if history == 'yes':
             print('Then you have this problem again.')
         elif history == 'no':
@@ -124,7 +124,7 @@ class Assignment:
     @staticmethod
     def multiplication_table():
         for number in range(1, 11):
-            for multiply in range(1, 10):
+            for multiply in range(1, 11):
                 print(number * multiply, end=' ')
             print('\n')
 
