@@ -1,5 +1,5 @@
 from unittest import TestCase
-import chibuzor_assignment
+from Adeola import chibuzor_assignment
 
 
 class Test(TestCase):
