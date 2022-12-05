@@ -265,13 +265,7 @@ if __name__ == '__main__':
             break
             """
 
-
-
-
-
-
-
-
+'''
 class FirstClass:
     def __init__(self, name, age):
         self.name = name
@@ -290,3 +284,20 @@ class FirstClass:
         return self.age
 
     print(random.randrange(1, 100))
+'''
+
+# random.seed(104)
+
+number = random.randint(1, 10)
+guess = int(input('Guess a number between 1 and 10: '))
+count = 1
+while count < 3:
+    if guess == number:
+        print('You guessed right :)')
+        break
+    else:
+        print('Try again.:(')
+        guess = int(input('Guess a number between 1 and 10: '))
+    count = count + 1
+else:
+    print(f'No more guesses.\nThe correct guess is {number}. Better luck next time, OLODO!')

@@ -1,3 +1,7 @@
+def print_name(name):
+    return name.upper()
+
+
 class Assignment:
     @staticmethod
     def is_grade(grade):
@@ -145,4 +149,15 @@ if __name__ == '__main__':
     # Assignment.palindrome(12321)  # number 10
     # Assignment.palindrome(123)  # number 10
     # Assignment.extract(12345)  # number 11
-    Assignment.multiplication_table()  # number 12
+    # Assignment.multiplication_table()  # number 12
+    a_list = [1, 2, 3]
+    b_list = a_list
+    print(a_list)
+    print(b_list)
+    a_list.append(27)
+    print(a_list)
+    print(b_list)
+    b_list = [4, 5, 6]
+    a_list.append(b_list)
+    print(a_list)
+

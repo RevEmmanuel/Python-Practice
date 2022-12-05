@@ -14,7 +14,7 @@ if __name__ == '__main__':
     else:
         print(inches, "inches of rain on one acre of land is", gallons, "gallons.")
 
-    inches_int = int(input('Enter the number of inches'))
+    inches_int = int(input('Enter the number of inches: '))
     volume = (inches_int / 12) * 43560
     gallons_int = volume * 7.48051945
     print(inches_int, "inches of rain on one acre of land is", gallons_int, "gallons.")

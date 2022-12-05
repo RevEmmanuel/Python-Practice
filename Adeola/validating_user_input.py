@@ -1,15 +1,18 @@
 if __name__ == '__main__':
     counter, counter_1, counter_2 = 1, 0, 0
     while counter <= 10:
-        result = int(input('Enter 1 for pass and 2 for fail: '))
-        if result == 1 or result == 2:
-            if result == 1:
-                counter_1 += 1
+        try:
+            result = int(input('Enter 1 for pass and 2 for fail: '))
+            if result == 1 or result == 2:
+                if result == 1:
+                    counter_1 += 1
+                else:
+                    counter_2 += 1
+                counter += 1
             else:
-                counter_2 += 1
-            counter += 1
-        else:
-            print('Enter a valid value!')
+                print('Enter a valid value!')
+        except ValueError:
+            print('Invalid type literal entered.')
     print(f'{counter_1} students passed and {counter_2} students failed.')
     print(f'Passed : {counter_1}\nFailed : {counter_2}')
     if counter_1 > 8:
