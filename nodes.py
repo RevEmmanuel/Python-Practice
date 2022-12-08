@@ -18,6 +18,10 @@ class LinkedList:
 
     def append(self, value):
         new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+            self.tail = self.head
+            return
         self.tail.next = new_node
         self.tail = new_node
 
@@ -34,4 +38,7 @@ random_node = LinkedList()
 random_node.append(2)
 random_node.append(4)
 random_node.print_list()
-print(random_node.tail.value)
+print(random_node.head.value)
+random_node.prepend(9)
+print(random_node.head.value)
+random_node.print_list()
