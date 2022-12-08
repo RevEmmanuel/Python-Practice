@@ -99,7 +99,5 @@ class Test(TestCase):
     def test_string_compression(self):
         testing_string_1 = "aabcccdddddd"
         testing_string_2 = "abcd"
-        print(chibuzor_assignment.string_compression(testing_string_1))
-        print(chibuzor_assignment.string_compression(testing_string_2))
         self.assertEqual("a2b1c3d6", chibuzor_assignment.string_compression(testing_string_1))
         self.assertEqual("abcd", chibuzor_assignment.string_compression(testing_string_2))
