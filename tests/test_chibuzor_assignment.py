@@ -91,3 +91,15 @@ class Test(TestCase):
 
         target = 4
         self.assertEqual(2, chibuzor_assignment.search_insert(nums, target))
+
+    def test_to_remove_duplicate_values(self):
+        lst = [1, 1, 3, 4, 5, 3, 7]
+        self.assertEqual([1, 3, 4, 5, 7], chibuzor_assignment.remove_duplicate_values(lst))
+
+    def test_string_compression(self):
+        testing_string_1 = "aabcccdddddd"
+        testing_string_2 = "abcd"
+        print(chibuzor_assignment.string_compression(testing_string_1))
+        print(chibuzor_assignment.string_compression(testing_string_2))
+        self.assertEqual("a2b1c3d6", chibuzor_assignment.string_compression(testing_string_1))
+        self.assertEqual("abcd", chibuzor_assignment.string_compression(testing_string_2))

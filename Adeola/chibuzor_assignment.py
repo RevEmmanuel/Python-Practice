@@ -150,3 +150,24 @@ def search_insert(param1, param2):
                 return 0
             if param1[i] < param2 < param1[i + 1]:
                 return i + 1
+
+
+def remove_duplicate_values(values):
+    new_lst = []
+    for i in values:
+        if i in new_lst:
+            continue
+        else:
+            new_lst.append(i)
+    return new_lst
+
+
+def string_compression(strings):
+    single_string = remove_duplicate_values(strings)
+    compressed_string = ""
+    for letter in single_string:
+        compressed_string = compressed_string + letter + str(strings.count(letter))
+    if len(compressed_string) > len(strings):
+        return strings
+    else:
+        return compressed_string
