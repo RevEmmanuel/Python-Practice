@@ -171,3 +171,18 @@ def string_compression(strings):
         return strings
     else:
         return compressed_string
+
+
+def happy_number(n):
+    addition_of_digits = n
+    results_gotten_before = []
+    while addition_of_digits not in results_gotten_before:
+        results_gotten_before.append(addition_of_digits)
+        n = addition_of_digits
+        addition_of_digits = 0
+        while n != 0:
+            addition_of_digits += (n % 10) ** 2
+            n /= 10
+        if addition_of_digits == 1:
+            return True
+    return False
